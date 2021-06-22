@@ -17,7 +17,7 @@ for instance in running_instances:
     for tag in instance.tags:
         if 'Name'in tag['Key']:
             name = tag['Value']
-    # Add instance info to a dictionary         
+    # Add instance info to a dictionary
     ec2info[instance.id] = {
         'Name': name,
         'Type': instance.instance_type,
